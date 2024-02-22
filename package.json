@@ -12,12 +12,18 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "dev": "react-scripts start --host",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "server": "json-server -p3001 --watch db.json",
-    "eslint": "eslint ."
+    "eslint": "eslint .",
+    "cypress:open": "cypress open",
+    "test:e2e": "cypress run"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "proxy": "http://localhost:3001",
   "eslintConfig": {
@@ -39,11 +45,16 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
+    "cypress": "^13.6.5",
+    "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-jest": "^27.6.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "json-server": "^0.17.1",
     "tailwindcss": "^3.4.1"
   }

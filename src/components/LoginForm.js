@@ -17,6 +17,7 @@ const LoginForm = ({
         Username
       </label>
       <input
+        id="username"
         type="text"
         value={username}
         name="Username"
@@ -30,6 +31,7 @@ const LoginForm = ({
         Password
       </label>
       <input
+        id="password"
         type="password"
         value={password}
         name="Password"
@@ -39,6 +41,7 @@ const LoginForm = ({
       />
     </div>
     <button
+      id="login-button"
       type="submit"
       className="bg-indigo-500 text-white py-2 px-4 rounded hover:bg-indigo-700 focus:outline-none active:bg-indigo-800"
     >
